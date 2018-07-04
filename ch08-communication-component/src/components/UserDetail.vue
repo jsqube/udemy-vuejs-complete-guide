@@ -15,7 +15,8 @@
     export default {
         props: {
             myName: {
-                type: String
+                type: String,
+                default: 'Max'
             },
             resetFn: Function,
             userAge: Number
