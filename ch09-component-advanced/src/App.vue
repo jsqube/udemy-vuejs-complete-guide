@@ -8,7 +8,8 @@
                 <hr>
                 <p>{{ selectedComponent }}</p>
                 <keep-alive>
-                    <component :is="selectedComponent">
+                    <component :is="selectedComponent" v-bind="{ title: 'test'}">
+                        <h2 slot="title">{{ quoteTitle }}</h2>
                         <p>Default Content</p>
                     </component>
                 </keep-alive>
@@ -33,6 +34,7 @@
                 selectedComponent: 'appQuote'
             }
         },
+
         components: {
             appQuote: Quote,
             appAuthor: Author,

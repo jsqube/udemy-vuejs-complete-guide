@@ -8,6 +8,9 @@
 
 <script>
     export default {
+        props:{
+            title: String
+        },
         data: function () {
             return {
                 counter: 0
